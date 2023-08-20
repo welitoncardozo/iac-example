@@ -1,8 +1,10 @@
-export type Namespace = 'prod' | 'homolog' | 'dev';
+export type Namespace = 'prod' | 'stage' | string;
 
 export function getNamespace(namespace: string | undefined): Namespace {
   if (!namespace) throw new Error('NAMESPACE environment variable is required');
-  if (!['prod', 'homolog', 'dev'].includes(namespace)) throw new Error(`NAMESPACE environment variable '${namespace}' is invalid`);
+
+  const isNamespaceInvalid = namespace !== 'prod' && namespace !== 'stage' && namespace.includes('pr');
+  if (isNamespaceInvalid) throw new Error(`NAMESPACE environment variable '${namespace}' is invalid`);
 
   return namespace as Namespace;
 }
