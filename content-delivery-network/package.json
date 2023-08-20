@@ -1,8 +1,8 @@
 {
-  "name": "aws-cdk-delivery-network",
+  "name": "content-delivery-network",
   "version": "0.1.0",
   "bin": {
-    "aws-cdk-delivery-network": "bin/aws-cdk-delivery-network.js"
+    "content-delivery-network": "bin/content-delivery-network.js"
   },
   "scripts": {
     "build": "tsc",
