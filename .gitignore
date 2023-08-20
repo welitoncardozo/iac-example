@@ -1,0 +1,8 @@
+# DEPENDENCIES
+node_modules
+
+# IDEA
+.idea
+
+# BUILD
+*.js
