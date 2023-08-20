@@ -10,7 +10,7 @@
     "test": "jest",
     "cdk": "cdk",
     "build:stack": "npm run build && npm --prefix ../backend run build",
-    "deploy:stack": "cdk deploy"
+    "deploy:stack": "cdk deploy --require-approval never"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",
