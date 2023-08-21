@@ -9,8 +9,10 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
+    "bootstrap": "cdk bootstrap",
     "build:stack": "npm run build && npm --prefix ../backend run build",
-    "deploy:stack": "cdk deploy --require-approval never"
+    "deploy:stack": "cdk deploy --require-approval never",
+    "destroy:stack": "cdk destroy --force"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",
