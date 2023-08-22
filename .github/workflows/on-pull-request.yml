@@ -18,7 +18,7 @@ jobs:
         run: echo "${{ github.event.pull_request.base.ref }}"
 
       - name: Show configs 2
-        run: echo ${{ echo github.event }}
+        run: echo "${{ echo github.event }}"
 
       - name: Show configs 3
         run: echo "${{ github.event.pull_request }}"
