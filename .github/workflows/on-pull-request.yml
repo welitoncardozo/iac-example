@@ -15,15 +15,7 @@ jobs:
           node-version: "18"
 
       - name: Show branch 1
-        run: echo ${GITHUB_REF#refs/heads/}
-
-      - name: Extract branch
-        shell: bash
-        run: echo "::set-env name=BRANCH_NAME::$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
-
-      - name: Show branch 2
-        run: echo ${{ BRANCH_NAME }}
+        run: echo ${{ github.event.pull_request.head.ref }}
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
