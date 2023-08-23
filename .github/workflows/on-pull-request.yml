@@ -17,20 +17,20 @@ jobs:
       - name: Show configs 1
         run: echo "${{ github.event.pull_request.base.ref }}"
 
-      - name: Show configs 2
-        run: echo ${{ github.event }}
-
       - name: Show configs 3
         run: echo "${{ github.event.pull_request }}"
 
       - name: Show configs 4
-        run: echo "${ github.event.pull_request.ref }"
+        run: echo "${{ github.event.pull_request.ref }}"
 
       - name: Show configs 5
         run: echo "${{ github.ref }}"
 
       - name: Show configs 6
         run: echo "${{ github.ref_name }}"
+
+      - name: Show configs object
+        run: echo ${{ toJSON(github.event) }}
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
