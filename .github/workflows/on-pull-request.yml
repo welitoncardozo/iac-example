@@ -6,16 +6,13 @@ on:
 jobs:
   deploy:
     env:
-      NAMESPACE: pr-${{ github.event.pull_request.base.ref }}-${{ github.event.number }}
+      NAMESPACE: pr-${{ github.event.pull_request.head.ref }}-${{ github.event.number }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: "18"
-
-      - name: Show branch 1
-        run: echo ${{ github.event.pull_request.head.ref }}
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
