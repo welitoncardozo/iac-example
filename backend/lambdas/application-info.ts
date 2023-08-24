@@ -4,7 +4,7 @@ export const handler: Handler = async (): Promise<APIGatewayProxyResult> => {
     statusCode: 200,
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      message: 'This is informations about application - Today is 23/08',
+      message: 'This is informations about application',
       nodeVersion: process.version,
       platformRunning: process.platform,
       region: process.env.AWS_REGION
